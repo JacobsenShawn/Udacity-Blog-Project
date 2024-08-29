@@ -1,0 +1,36 @@
+/* header */
+.head{
+   grid-area: head;
+   text-align: center;
+   text-decoration: none;
+   background-color: black;
+   margin:0;
+}
+
+h1{
+    margin:0;
+}
+h1 a{
+    color:var(--c-7); 
+}
+ .title{
+    text-align: center;
+    color:var(--c-7);
+}
+/* image*/
+.spaceman{
+   width:300px;
+   height: 250px;
+   border-radius: 100%;
+   border: 3px solid var(--c-4);
+   margin-top: 20px;
+   margin-bottom: 30px;
+     
+}
+.spaceman:hover{
+       align-items: center;
+       justify-content: center;
+       border:1px solid var(--c-6);
+       box-shadow:1px 2px 50px 25px  rgb(253, 251, 251);
+       background-color: var(--c-6);  
+}

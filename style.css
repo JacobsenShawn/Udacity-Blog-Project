@@ -1,0 +1,161 @@
+
+@import url('./css/header.css');
+@import url('./css/cards.css');
+@import url('./css/socials.css');
+@import url('.//css/navbar.css');
+
+/* ------------- Color Variables ------------------------------*/
+
+:root{
+--c-1:#021526;
+--c-2:#03346E;
+--c-3:#6EACDA;
+--c-4:#E2E2B6;
+--c-5:#005B41;
+--c-6:#000000;
+--c-7:#ffffff;
+}
+
+
+body{
+background-color: var(--c-1);
+color: var(--c-4);
+margin: 0;
+padding: 0;
+}
+/* --Entire Container--*/
+.container{
+    display:grid;
+    grid-template-columns: 100%;
+    grid-template-rows: auto;
+    grid-template-areas: 
+    "head"
+    "nav"
+    "mn"
+    "foot";
+    margin: auto;
+
+
+   
+}
+/* --Card Container--*/
+.card-container{
+    grid-area:cards;
+    display: grid;
+    grid-column: 100%;
+    grid-template-rows: auto;
+    grid-template-areas:
+    "aurora"
+    "earymoon"
+    "purplesky"
+    "tech" ;
+    gap:20px;
+    
+
+
+
+}
+/* --Form Section--*/
+.form-box{
+    grid-area:form;
+    margin:10px 0 30px 0;
+    display:flex;
+    flex-direction:row;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.in-box{
+    background-color: var(--c-6);
+    border: 2px solid var(--c-4);
+    color:white;
+}
+.sub-btn{
+    margin-top: 6px;
+    background-color: var(--c-5);
+    color:white;
+}
+
+/* --Footer Section--*/ 
+.foot{
+    grid-area: footer;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    text-align: center;
+    }
+.foot a{
+    text-decoration: none;
+    margin: 0 5px 0 5px;
+    font-size: 13px;
+    background-color: var(--c-4);
+    border: 2px solid var(--c-2);
+    border-radius: 30px;
+    padding: 2px 5px 2px 5px;
+    color:#021526;
+}
+.foot a:hover{
+    align-items: center;
+    justify-content: center;
+    padding:2px 8px 2px 8px ;
+    border:1px solid var(--c-4);
+    border-radius: 35px;
+    box-shadow:1px 1px 10px 5px rgb(11, 11, 11);
+    background-color: var(--c-6);
+    color:white;
+}
+
+@media screen  and (min-width: 500px){
+    body{
+         
+.card-container{
+    display: grid;
+    grid-column: 100%;
+    grid-template-rows: repeat(auto);
+    grid-template-areas:
+    "aurora earymoon"
+    "purplesky  tech" ;
+    margin: 10px;
+    gap:20px;
+    max-width: 767;
+}
+ .social-nav li{
+     margin: 0 100px 0 100px;
+     padding: 0 10px 0 5px;
+ }
+}
+ .navbar li{
+    list-style-type: none;
+    margin:10px 20px 10px 20px;
+    padding: 0 5px 0 0;
+    
+}
+}
+@media screen  and (min-width: 900px){
+    body{
+.card-container{
+       display: grid;
+       grid-column: 100%;
+       grid-template-rows: repeat(auto);
+       grid-template-areas:
+       "aurora earymoon purplesky "
+       ". tech ." ;
+       margin: 10px;
+       gap:20px;
+      max-width: 767;
+}
+
+.social-nav li{
+    margin: 0 200px 0 200px;
+    padding: 0 10px 0 5px;
+}
+      
+}
+.navbar li{
+            list-style-type: none;
+            margin:10px 100px 10px 90px ;
+            padding: 0 5px 0 0;
+           
+}
+        
+
+}
